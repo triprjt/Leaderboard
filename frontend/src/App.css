@@ -1,0 +1,140 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.formtop {
+  margin-top: 5rem;
+  border: sienna;
+  border-width: thick;
+  padding: 1rem;
+  width: 50%;
+  justify-items: center;
+  border: darkslategrey;
+  border-width: medium;
+}
+.highlight {
+  background: yellow !important;
+  /* display: hidden; */
+}
+.inputbutton {
+  gap: 2rem;
+}
+.scrollable-table {
+  max-height: 500px;
+  overflow-y: auto;
+  display: block;
+  width: fit-content;
+}
+.sticky-row {
+  position: sticky;
+  bottom: 0;
+  /* background: rgb(248, 2, 2); */
+  z-index: 1;
+}
+.tableContainer {
+  background-color: #1e1f25;
+  border-radius: 20px;
+  height: 320px;
+  padding: 3px 6px 6px 6px;
+  overflow: scroll;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+/* CSS */
+.center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust this to your needs */
+  text-align: center;
+}
+
+/* CSS */
+@keyframes loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .App-logo {
+    height: 30vmin;
+  }
+
+  .formtop {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    width: 50%; /* use full width on small screens */
+    justify-items: center;
+    justify-content: center;
+    border: hidden;
+  }
+
+  .inputbutton {
+    gap: 1rem;
+    flex-direction: row; /* Stack buttons vertically on small screens */
+    width: 100%; /* use full width on small screens */
+    justify-content: space-evenly;
+  }
+
+  .scrollable-table,
+  .scrollable-table-mobile {
+    max-height: 75vh; /* adjust the value to fit your needs */
+    overflow-x: auto; /* allow table to scroll horizontally on small screens */
+  }
+
+  .tableContainer {
+    height: auto;
+    padding: 2px 4px 4px 4px;
+    width: 80%; /* use full width on small screens */
+  }
+
+  .App-header {
+    min-height: 50vh;
+    font-size: calc(10px + 1vmin);
+  }
+
+  .center-div {
+    height: auto;
+  }
+
+  .mobile-table {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+}
