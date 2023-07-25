@@ -7,9 +7,15 @@ from datetime import timedelta
 from django.utils.timezone import now
 from rest_framework import status
 from rest_framework.exceptions import ValidationError
+from django.shortcuts import render
+
+def index(request):
+        return render(request, 'index.html')
 
 class StudentViewSet(viewsets.ModelViewSet):
     serializer_class = StudentSerializer    
+
+    
 
     def get_queryset(self):
         queryset = Student.objects.all().order_by('-points')

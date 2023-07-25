@@ -107,7 +107,7 @@ function StudentList() {
       setIsLoading(true); // set isLoading to true before the data fetching begins
       try {
         const response = await axios.get(
-          "http://127.0.0.1:8000/leaderboard/students/"
+          `${process.env.REACT_APP_API_URL}students/`
         );
         setStudents(response.data); // store the students data in state
       } catch (error) {
@@ -132,7 +132,7 @@ function StudentList() {
     }
 
     const response = await axios.get(
-      `http://127.0.0.1:8000/leaderboard/students/by_roll_no/`,
+      `${process.env.REACT_APP_API_URL}students/by_roll_no/`,
       {
         params: { roll_no: rollNumberInt },
       }
@@ -150,7 +150,7 @@ function StudentList() {
         if (filterData.filterType === "friends") {
           try {
             response = await axios.get(
-              `http://127.0.0.1:8000/leaderboard/students/by_friends/`,
+              `${process.env.REACT_APP_API_URL}students/by_friends/`,
               {
                 params: {
                   roll_no: filterData.filterValue,
@@ -166,7 +166,7 @@ function StudentList() {
         } else {
           try {
             response = await axios.get(
-              `http://127.0.0.1:8000/leaderboard/students/by_filter/`,
+              `${process.env.REACT_APP_API_URL}students/by_filter/`,
               {
                 params: {
                   type: filterData.filterType,
@@ -182,7 +182,7 @@ function StudentList() {
       } else {
         try {
           response = await axios.get(
-            "http://127.0.0.1:8000/leaderboard/students/"
+            `${process.env.REACT_APP_API_URL}students/`
           );
           responseData = response.data;
         } catch (error) {
