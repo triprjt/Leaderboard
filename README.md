@@ -4,11 +4,12 @@ A leaderboard of students.  Built in Django and ReactJs.
 How to install?
 1. clone repo
 2. Go to backend, then run these commands:
-a. pip install -r requirements.txt;
-b. python manage.py makemigrations;
-c. python manage.py migrate;
-d. python manage.py seed_data 800;
-e. python manage.py runserver
+<li> pip install -r requirements.txt </li>
+<li>python manage.py makemigrations</li>
+<li>python manage.py migrate</li>
+<li>python manage.py seed_data 800</li>
+<li>python manage.py runserver</li>
+
 
 The app will be live at localhost:8000
 
