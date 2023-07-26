@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 
 # Application definition
@@ -75,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+# WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
