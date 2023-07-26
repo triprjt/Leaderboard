@@ -11,10 +11,11 @@ class School(models.Model):
 
 class Section(models.Model):
     SECTIONS = [('A', 'A'), ('B', 'B'), ('C', 'C'), ('D', 'D')]
-    name = models.CharField(max_length=1, choices=SECTIONS)
+    name = models.CharField(max_length=50, choices=SECTIONS)  # increase max_length
 
     def __str__(self):
         return f"Section {self.name}"
+
     
 class GlobalUniqueCounter(models.Model):
     last_roll_no = models.IntegerField(default=0)

@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-#i55)!v^6zp9ekfsxqrt^_g2wtrje9w$2^&u14()4!&64y7ymr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+
 
 
 # Application definition
@@ -81,18 +82,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
     # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'leaderboard',
-    #     'USER': 'root',
-    #     'PASSWORD': 'root0ol,',
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3306',
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'NxiuPKZ1b80fyIXA5pMZ',
+        'HOST': 'containers-us-west-94.railway.app',
+        'PORT': '5743',
+    }
 
 }
 
@@ -141,9 +142,10 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # Here is the STATIC_ROOT setting
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:3000",
+# ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
