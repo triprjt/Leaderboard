@@ -14,4 +14,6 @@ python manage.py runserver
 npm install
 npm start
 
+Demo of the app: 
+[Video](https://drive.google.com/file/d/1YrAK5YX5CFO1tVdqr8Q9KFs0BcuhHA5v/view?usp=sharing)
 
